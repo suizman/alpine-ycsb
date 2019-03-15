@@ -4,7 +4,7 @@ WORKDIR /build
 
 RUN git clone https://github.com/brianfrankcooper/YCSB.git
 RUN cd YCSB \
-  && mvn -am clean package -Dmaven.test.skip=true
+  && mvn -q -am clean package -Dmaven.test.skip=true
 
 FROM rijalati/alpine-zulu-jdk8:latest-mini
 MAINTAINER suizman@outlook.com
